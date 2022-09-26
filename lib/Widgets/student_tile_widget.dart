@@ -12,14 +12,14 @@ class StudentListTile extends StatefulWidget {
   final double? height;
   final String? address;
   final VoidCallback? fn;
-  final VoidCallback? add;
+
   const StudentListTile({
     Key? key,
     this.name,
     this.age,
     this.height,
     this.address,
-    this.fn, this.add,
+    this.fn,
   }) : super(key: key);
 
   @override
@@ -74,11 +74,6 @@ class _StudentListTileState extends State<StudentListTile> {
                 title: Text("Student height:- ${widget.height}"),
               ),
             ),
-            ButtonBar(
-              children: [
-                ElevatedButton(onPressed: widget.add, child: Text("Add Students"))
-              ],
-            )
           ],
         ),
       ),
